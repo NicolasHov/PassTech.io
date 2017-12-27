@@ -18,6 +18,7 @@ gem 'pry-byebug'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'rack-mini-profiler'
+gem 'now-ui-kit-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

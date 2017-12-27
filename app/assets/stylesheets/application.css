@@ -15,7 +15,6 @@
 
  * Appelle la librairie Now-UI-Kit
  *= require bootstrap.min
- @import "now-ui-kit";
  *= require now-ui-kit
  *= require demo
  *= require jquery-ui
