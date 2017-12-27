@@ -21,45 +21,148 @@
             </div>
         </div>
     </div>
-        <div class="section section-about-us">
+        <div class="section section-google-map">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
-                        <h2 class="title">Qui sommes-nous ?</h2>
-                        <h5 class="description">Le Blue Cheese Project est une plateforme qui propose d'avoir accès à toutes les initiatives permettant de prendre sa vie en main.</h5>
+                        <h2 class="title">Trouver la formation qui vous correspond !</h2>
+                       
                     </div>
                 </div>
-                <div class="separator separator-primary"></div>
-                <div class="section-story-overview">
+
+                <br>
+                <div id="floating-panel">
+                        <button id="drop" onclick="drop()">Drop Markers</button>
+                </div>
+                <div id="map"></div>
+               
+                
+                <%= javascript_tag do %> 
+                
+                
+                var map;
+                var myLatLng = {lat: 48.991269, lng: 2.111445};
+        
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: myLatLng,
+                        zoom: 5
+                    });
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        animation: google.maps.Animation.DROP,
+                        map: map
+                    });
+                    marker.setMap(map);
+        
+                    var infowindow = new google.maps.InfoWindow({
+                        content: "votre position"
+                    });
+                    infowindow.open(map,marker);
+                };
+        
+                <!-- TODO WIP -->
+                
+              var neighborhoods = [
+              {lat: 52.511, lng: 13.447},
+              {lat: 52.549, lng: 13.422},
+              {lat: 52.497, lng: 13.396},
+              {lat: 52.517, lng: 13.394}
+            ];
+        
+            var markers = [];
+        
+              function drop() {
+                clearMarkers();
+                for (var i = 0; i < neighborhoods.length; i++) {
+                  addMarkerWithTimeout(neighborhoods[i], i * 200);
+                }
+              };
+        
+              function addMarkerWithTimeout(position, timeout) {
+                window.setTimeout(function() {
+                  markers.push(new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    animation: google.maps.Animation.DROP
+                  }));
+                }, timeout);
+              };
+        
+              function clearMarkers() {
+                for (var i = 0; i < markers.length; i++) {
+                  markers[i].setMap(null);
+                }
+                markers = [];
+              };
+                
+                <% end %>
+                
+                <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API'] %>&callback=initMap"
+                    async defer></script>
+        
+                <style>
+                    #map {
+                        height: 500px;
+                        width: 100%;
+                        }
+                        
+                        .container {
+                            height: 80%;
+                        }
+                        #floating-panel {
+                            position: absolute;
+                            top: 150px;
+                            left: 20%;
+                            z-index: 5;
+                            background-color: #fff;
+                            padding: 5px;
+                            border: 1px solid #999;
+                            text-align: center;
+                            font-family: 'Roboto','sans-serif';
+                            line-height: 30px;
+                            padding-left: 10px;
+                          }
+                          #floating-panel {
+                            margin-left: -52px;
+                          }
+                </style>
+                
+            </div>
+        </div>
+        <div class="section section-about-us">
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="image-container image-left" title="Photo by Darren Coleshill on Unsplash" style="background-image: url(<%= asset_path 'french_cheeses.jpg' %>)">
-                                <!-- First image on the left side -->
-                                <p class="blockquote blockquote-primary">"Ils m'ont demandé ce que je voulais faire quand je serais grand, j'ai dit j'veux tout niquer."
-                                    <br>
-                                    <br>
-                                    <small>-Booba</small>
-                                </p>
-                            </div>
-                            <!-- Second image on the left side of the article -->
-                            <div class="image-container" style="background-image: url(<%= asset_path 'front-image4.jpg' %>)"></div>
+                        <div class="col-md-8 ml-auto mr-auto text-center">
+                            <h2 class="title">Qui sommes-nous ?</h2>
+                            <h5 class="description">Le Blue Cheese Project est une plateforme qui propose d'avoir accès à toutes les initiatives permettant de prendre sa vie en main.</h5>
                         </div>
-                        <div class="col-md-5">
-                            <!-- First image on the right side, above the article -->
-                            <div class="image-container image-right" style="background-image: url(<%= asset_path 'front-image.jpg' %>)"></div>
-                            <h3>Notre histoire</h3>
-                            <p>Et si l'on réinventait l'école ? C'est la question que Félix et Charles se sont posés en créant une école nouvelle génération où les élèves transpirent en groupe sur des projets concrets.<br> L'émulation d'équipe fait naître un esprit de corps. En tant qu'explorateurs, les élèves découvriront toutes les facettes des projets enseignés et réapprennent à apprendre.
-                            </p>
-                            <p>Félix et Charles se sont rencontrés en étant élèves de cette formation, dans le tout premier groupe. En étant leurs propres profs, et en faisant des projets concrets, ce premier groupe de 6 personnes a appris à coder en trois mois. Ils ont eu une révélation sur ce modèle : cela marche, et cela permet de proposer des cursus gratuits et ouverts à tous.
-                            </p>
-                            <p>Des squats du 93, à la Côte d'Ivoire, en passant par la scène tech parisienne et même la Martinique, des groupes ont commencé à fleurir partout dans le monde, avec comme objectif unique : galérer ensemble pour parvenir en 12 semaines à avoir les clés de la boite à outil du domaine du cursus choisi.
-                            </p>
+                    </div>
+                    <div class="separator separator-primary"></div>
+                    <div class="section-story-overview">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="image-container image-left" title="Photo by Darren Coleshill on Unsplash" style="background-image: url(<%= asset_path 'french_cheeses.jpg' %>)">
+                                    <!-- First image on the left side -->
+                                    <p class="blockquote blockquote-primary">"Ils m'ont demandé ce que je voulais faire quand je serais grand, j'ai dit j'veux tout niquer."
+                                        <br>
+                                        <br>
+                                        <small>-Booba</small>
+                                    </p>
+                                </div>
+                                <!-- Second image on the left side of the article -->
+                                <div class="image-container" style="background-image: url(<%= asset_path 'front-image4.jpg' %>)"></div>
+                            </div>
+                            <div class="col-md-5">
+                                <!-- First image on the right side, above the article -->
+                                <div class="image-container image-right" style="background-image: url(<%= asset_path 'front-image.jpg' %>)"></div>
+                                <h3>Notre histoire</h3>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
 
             <div class="features-1">
                 <div class="container">
