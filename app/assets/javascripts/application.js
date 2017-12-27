@@ -10,6 +10,28 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
+
+// Appelle la librairie Now-UI Kit
+//= require jquery
+//= require jquery_ujs
+//= require rails-ujs
+//= require jquery.3.2.1.min
+//= require popper
+//= require bootstrap.min
+//= require popper.min
+//= require moment.min
+//= require bootstrap-datepicker
+//= require bootstrap-datetimepicker.min
+//= require bootstrap-selectpicker
+//= require bootstrap-switch
+//= require bootstrap-tagsinput
+//= require isometricGrids
+//= require jasny-bootstrap.min
+//= require jquery.flexisel
+//= require modernizr.custom
+//= require nouislider.min
+//= require now-ui-kit

@@ -8,7 +8,18 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
-# Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in the app/assets
-# folder are already added.
-# Rails.application.config.assets.precompile += %w( admin.js admin.css )
+# ajout de tous les subfolders du dossier images dans l'asset pipeline
+Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
+    Rails.application.config.assets.paths << path
+  end
+  
+  
+  # Precompile additional assets.
+  # application.js, application.css, and all non-JS/CSS in the app/assets
+  # folder are already added.
+  # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+  Rails.application.config.assets.precompile += %w( static_pages.css )
+  Rails.application.config.assets.precompile += %w( static_pages.js )
+  
+  Rails.application.config.assets.paths << "#{Rails.root}/app/assets/images/cursus"
+  

@@ -1,0 +1,151 @@
+.hover-stylay {
+    box-shadow: 0 10px 40px 0 rgba(62,57,107,0.07), 0 2px 9px 0 rgba(62,57,107,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform, box-shadow;
+  }
+  
+  .hover-stylay:hover {
+    box-shadow: 0 16px 32px 0 rgba(62,57,107,0.28), 0 0 0 transparent;
+    transform: translateY(-5px) translateZ(0);
+  }
+  
+  /****************/
+  /* 	  MODAL     */
+  /****************/
+  
+  .modal-custom {
+      margin-left: -100px !important; /* Provisoir */
+      width: 700px !important;
+  }
+  .modal-text-opener {
+      color: #FA7A50;
+      font-size: 20px;
+  }
+  .modal-text-opener:hover {
+      text-decoration: underline;
+  }
+  @media (max-width: 700px) {
+      .modal-custom {
+          margin: 0 auto;
+          max-width: 500px !important;
+      }
+  }
+  @media (max-width: 360px) {
+      .modal-custom {
+          margin: 0 auto;
+          max-width: 320px !important;
+      }
+  }
+  
+  /***********/
+  /* SIDEBAR */
+  /***********/
+  
+  .nav-sidebar {
+      position: fixed;
+      width: 16%;
+      background-color: #f0f0f0;
+  
+      height: 100%;
+      overflow: hidden;
+  
+  }
+  
+  .sidebar {
+      top: 0px;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      display: block;
+      padding: 20px;
+      overflow-x: hidden;
+      overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+      margin-top: -28px;
+  
+      background-color: #f0f0f0;
+      width: 16%;
+  
+  
+  }
+  
+  .nav-img {
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+      height: 150px;
+      width: 150px;
+      padding: 15px;
+  }
+  
+  .nav-dash ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+  }
+  
+  .nav-dash li {
+      width: 100%;
+  }
+  
+  .nav-dash li a {
+      padding: 8px 25px;
+      text-decoration: none;
+      display: block;
+      color: black;
+      transition: all 300ms ease;
+  }
+  
+  .nav-dash ul li a {
+      font-size: 0.9em;
+      padding: 8px 50px;
+  }
+  
+  
+  .nav-dash li a:hover, .nav-dash li a.current {
+      background-color: #F96332;
+      color: #333;
+      text-decoration: none;
+  }
+  
+  
+  /******************************/
+  /* TOOLS CLEAR SPACER ETC ETC */
+  /******************************/
+  
+  .fa {
+      margin-left: 10px;
+  }
+  .spacer {
+      margin-left: 20px;
+  }
+  .spacer-left-40 {
+      margin-left: 45px;
+  }
+  .spacer-right-40 {
+      margin-right: 20px;
+  }
+  .class-font i {
+      margin-right: 15px;
+      float: right;
+  /* Font keylocker */
+  }
+  .clear {
+      clear: both;
+  }
+  
+  
+  /******************************/
+  /* BLOCS DE CODE EN PRE */
+  /******************************/
+  
+  
+  
+  pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 9.5px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+  }
+  
