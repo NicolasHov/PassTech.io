@@ -11,10 +11,9 @@
 // about supported directives.
 //
 
--> pourquoi on a rien dans lib/assets ..
+//-> on ne peut pas appeler la librairie si elle est vide : on a rien dans lib/assets  
 
 // Appelle la librairie Now-UI Kit
-//= require_tree .
 //= require jquery
 //= require jquery_ujs
 //= require rails-ujs
@@ -34,3 +33,4 @@
 //= require modernizr.custom
 //= require nouislider.min
 //= require now-ui-kit
+//= require_tree .

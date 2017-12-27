@@ -17,7 +17,6 @@
  *= require bootstrap.min
  *= require now-ui-kit
  *= require demo
- *= require jquery-ui
  *= require_tree .
 
  
