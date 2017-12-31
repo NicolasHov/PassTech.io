@@ -33,50 +33,50 @@
                     marker.setMap(map);
         
                     var infowindow = new google.maps.InfoWindow({
-                        content: "Le Wagon"
+                        content: "<%= Bootcamp.find(2).name %>"
                     });
                     infowindow.open(map,marker);
                 };
         
                 <!-- Démo Villes -->
                 
-              var neighborhoods = [
-              {lat: 45.75, lng: 4.85},
-              {lat: 43.7, lng: 7.25},
-              {lat: 44.833333, lng: -0.566667},
-              {lat: 47.216667, lng: -1.55},
-              {lat: 48.583333, lng: 7.75},
-              {lat: 43.3, lng: 5.4},
-              {lat: 50.633333, lng: 3.06},
-              {lat: 43.6, lng: 1.433333}
-            ];
-        
-            var markers = [];
-        
-              function drop() {
-                clearMarkers();
-                for (var i = 0; i < neighborhoods.length; i++) {
-                  addMarkerWithTimeout(neighborhoods[i], i * 200);
-                }
-              };
-        
-              function addMarkerWithTimeout(position, timeout) {
-                window.setTimeout(function() {
-                  markers.push(new google.maps.Marker({
-                    position: position,
-                    map: map,
-                    animation: google.maps.Animation.DROP
-                  }));
-                }, timeout);
-              };
-        
-              function clearMarkers() {
-                for (var i = 0; i < markers.length; i++) {
-                  markers[i].setMap(null);
-                }
-                markers = [];
-              };
-                
+                var bootcamps = [
+                {lat: 45.75, lng: 4.85},
+                {lat: 43.7, lng: 7.25},
+                {lat: 44.833333, lng: -0.566667},
+                {lat: 47.216667, lng: -1.55},
+                {lat: 48.583333, lng: 7.75},
+                {lat: 43.3, lng: 5.4},
+                {lat: 50.633333, lng: 3.06},
+                {lat: 43.6, lng: 1.433333}
+                ];
+            
+                var markers = [];
+            
+                function drop() {
+                    clearMarkers();
+                    for (var i = 0; i < bootcamps.length; i++) {
+                    addMarkerWithTimeout(bootcamps[i], i * 200);
+                    }
+                };
+            
+                function addMarkerWithTimeout(position, timeout) {
+                    window.setTimeout(function() {
+                    markers.push(new google.maps.Marker({
+                        position: position,
+                        map: map,
+                        animation: google.maps.Animation.DROP
+                    }));
+                    }, timeout);
+                };
+            
+                function clearMarkers() {
+                    for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(null);
+                    }
+                    markers = [];
+                };
+                    
                 <% end %>
                 
                 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API'] %>&callback=initMap"
