@@ -1,0 +1,109 @@
+<div class="section section-google-map">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <h2 class="title">Trouver la formation qui vous correspond !</h2>
+                       
+                    </div>
+                </div>
+
+                <br>
+                <div id="floating-panel">
+                        <button id="drop" onclick="drop()">Drop Markers</button>
+                </div>
+                <div id="map"></div>
+               
+                
+                <%= javascript_tag do %> 
+                
+                
+                var map;
+                var myLatLng = {lat: 48.991269, lng: 2.111445};
+        
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: myLatLng,
+                        zoom: 5
+                    });
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        animation: google.maps.Animation.DROP,
+                        map: map
+                    });
+                    marker.setMap(map);
+        
+                    var infowindow = new google.maps.InfoWindow({
+                        content: "votre position"
+                    });
+                    infowindow.open(map,marker);
+                };
+        
+                <!-- TODO WIP -->
+                
+              var neighborhoods = [
+              {lat: 52.511, lng: 13.447},
+              {lat: 52.549, lng: 13.422},
+              {lat: 52.497, lng: 13.396},
+              {lat: 52.517, lng: 13.394}
+            ];
+        
+            var markers = [];
+        
+              function drop() {
+                clearMarkers();
+                for (var i = 0; i < neighborhoods.length; i++) {
+                  addMarkerWithTimeout(neighborhoods[i], i * 200);
+                }
+              };
+        
+              function addMarkerWithTimeout(position, timeout) {
+                window.setTimeout(function() {
+                  markers.push(new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    animation: google.maps.Animation.DROP
+                  }));
+                }, timeout);
+              };
+        
+              function clearMarkers() {
+                for (var i = 0; i < markers.length; i++) {
+                  markers[i].setMap(null);
+                }
+                markers = [];
+              };
+                
+                <% end %>
+                
+                <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API'] %>&callback=initMap"
+                    async defer></script>
+        
+                <style>
+                    #map {
+                        height: 500px;
+                        width: 100%;
+                        }
+                        
+                        .container {
+                            height: 80%;
+                        }
+                        #floating-panel {
+                            position: absolute;
+                            top: 150px;
+                            left: 20%;
+                            z-index: 5;
+                            background-color: #fff;
+                            padding: 5px;
+                            border: 1px solid #999;
+                            text-align: center;
+                            font-family: 'Roboto','sans-serif';
+                            line-height: 30px;
+                            padding-left: 10px;
+                          }
+                          #floating-panel {
+                            margin-left: -52px;
+                          }
+                </style>
+                
+            </div>
+        </div>
