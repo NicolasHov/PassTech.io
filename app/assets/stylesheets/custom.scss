@@ -160,6 +160,10 @@
 //     background-color: #ddd3d3 !important;
 //   }
 
-.card-description {
+.section-image {
+    // background-color: rgba(0, 0, 0, 0) !important; >>>>> ne fonctionne pas, ni transparent, ni none ...
+}
+
+.card-description, .description {
     font-weight: bolder !important;
 }
