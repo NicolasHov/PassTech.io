@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   # SITE VITRINE
   root 'static_pages#home'
   get '/peer-learning', to: 'static_pages#peerlearning', as: 'home_peer_learning'
@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   #    post 'login', to: 'devise/sessions#create', as: :user_session
   #    delete 'logout', to: 'devise/sessions#destroy', as: :destroy_user_session
   #  end
- 
+
 end

@@ -171,8 +171,6 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    now-ui-kit-rails (0.0.4)
-      sass-rails
     orm_adapter (0.5.0)
     os (0.9.6)
     pg (0.20.0)
@@ -354,7 +352,6 @@ DEPENDENCIES
   listen (= 3.1.5)
   mailjet
   mini_magick
-  now-ui-kit-rails
   pg (= 0.20.0)
   poltergeist
   pry-byebug

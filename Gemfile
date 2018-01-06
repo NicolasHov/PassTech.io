@@ -53,7 +53,7 @@ group :production do
   gem 'dalli'
 
   # À VIRER LORS DU LIVE POUR DE VRAI
-  gem 'faker'
+  #gem 'faker'
 
 
 end
