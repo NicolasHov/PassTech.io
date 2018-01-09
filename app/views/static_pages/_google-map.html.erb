@@ -3,23 +3,23 @@
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
                         <h2 class="title">Trouver l'expérience qui vous correspondra le mieux !</h2>
-                       
+
                     </div>
                 </div>
 
                 <br>
                 <div id="floating-panel">
-                        <button id="drop" onclick="drop()">Drop Markers</button>
+                        <button id="drop" onclick="drop()">Afficher les bootcamps</button>
                 </div>
                 <div id="map"></div>
-               
-                
-                <%= javascript_tag do %> 
-                
-                
+
+
+                <%= javascript_tag do %>
+
+
                 var map;
                 var myLatLng = {lat: 48.991269, lng: 2.111445};
-        
+
                 function initMap() {
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: myLatLng,
@@ -31,35 +31,35 @@
                         map: map
                     });
                     marker.setMap(map);
-        
+
                     var infowindow = new google.maps.InfoWindow({
-                        content: "<%= Bootcamp.find(2).name %>"
+                        content: "Mes clefs"
                     });
                     infowindow.open(map,marker);
                 };
-        
-                <!-- Démo Villes -->
-                
+
+                <!-- TODO refacto code TODO add infowindows for the bootcamp -->
+
                 var bootcamps = [
-                {lat: 45.75, lng: 4.85},
-                {lat: 43.7, lng: 7.25},
-                {lat: 44.833333, lng: -0.566667},
+                {lat: <%= Bootcamp.find(1).latitude %>, lng: <%= Bootcamp.find(1).longitude %>},
+                {lat: <%= Bootcamp.find(2).latitude %>, lng: <%= Bootcamp.find(2).longitude %>},
+                {lat: <%= Bootcamp.find(3).latitude %>, lng: <%= Bootcamp.find(3).longitude %>},
                 {lat: 47.216667, lng: -1.55},
                 {lat: 48.583333, lng: 7.75},
                 {lat: 43.3, lng: 5.4},
                 {lat: 50.633333, lng: 3.06},
                 {lat: 43.6, lng: 1.433333}
                 ];
-            
+
                 var markers = [];
-            
+
                 function drop() {
                     clearMarkers();
                     for (var i = 0; i < bootcamps.length; i++) {
                     addMarkerWithTimeout(bootcamps[i], i * 200);
                     }
                 };
-            
+
                 function addMarkerWithTimeout(position, timeout) {
                     window.setTimeout(function() {
                     markers.push(new google.maps.Marker({
@@ -69,25 +69,25 @@
                     }));
                     }, timeout);
                 };
-            
+
                 function clearMarkers() {
                     for (var i = 0; i < markers.length; i++) {
                     markers[i].setMap(null);
                     }
                     markers = [];
                 };
-                    
+
                 <% end %>
-                
+
                 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API'] %>&callback=initMap"
                     async defer></script>
-        
+
                 <style>
                     #map {
                         height: 500px;
                         width: 100%;
                         }
-                        
+
                         .container {
                             height: 80%;
                         }
@@ -108,6 +108,6 @@
                             margin-left: -52px;
                           }
                 </style>
-                
+
             </div>
         </div>
