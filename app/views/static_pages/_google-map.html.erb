@@ -3,19 +3,16 @@
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
                         <h2 class="title">Trouver l'expérience qui vous correspondra le mieux !</h2>
-
                     </div>
                 </div>
 
-                <br>
+                <br />
                 <div id="floating-panel">
-                        <button id="drop" onclick="drop()">Afficher les bootcamps</button>
+                    <button id="drop" onclick="drop()">Afficher les bootcamps</button>
                 </div>
                 <div id="map"></div>
 
-
                 <%= javascript_tag do %>
-
 
                 var map;
                 var myLatLng = {lat: 48.991269, lng: 2.111445};
@@ -38,17 +35,17 @@
                     infowindow.open(map,marker);
                 };
 
-                <!-- TODO refacto code TODO add infowindows for the bootcamp -->
+                <!-- TODO add info windows for the bootcamp -->
 
                 var bootcamps = [
-                {lat: <%= Bootcamp.find(1).latitude %>, lng: <%= Bootcamp.find(1).longitude %>},
-                {lat: <%= Bootcamp.find(2).latitude %>, lng: <%= Bootcamp.find(2).longitude %>},
-                {lat: <%= Bootcamp.find(3).latitude %>, lng: <%= Bootcamp.find(3).longitude %>},
-                {lat: 47.216667, lng: -1.55},
-                {lat: 48.583333, lng: 7.75},
-                {lat: 43.3, lng: 5.4},
-                {lat: 50.633333, lng: 3.06},
-                {lat: 43.6, lng: 1.433333}
+                    {lat: <%= Bootcamp.find(1).latitude %>, lng: <%= Bootcamp.find(1).longitude %>},
+                    {lat: <%= Bootcamp.find(2).latitude %>, lng: <%= Bootcamp.find(2).longitude %>},
+                    {lat: <%= Bootcamp.find(3).latitude %>, lng: <%= Bootcamp.find(3).longitude %>},
+                    {lat: 47.216667, lng: -1.55},
+                    {lat: 48.583333, lng: 7.75},
+                    {lat: 43.3, lng: 5.4},
+                    {lat: 50.633333, lng: 3.06},
+                    {lat: 43.6, lng: 1.433333}
                 ];
 
                 var markers = [];
@@ -56,23 +53,23 @@
                 function drop() {
                     clearMarkers();
                     for (var i = 0; i < bootcamps.length; i++) {
-                    addMarkerWithTimeout(bootcamps[i], i * 200);
+                        addMarkerWithTimeout(bootcamps[i], i * 200);
                     }
                 };
 
                 function addMarkerWithTimeout(position, timeout) {
                     window.setTimeout(function() {
-                    markers.push(new google.maps.Marker({
-                        position: position,
-                        map: map,
-                        animation: google.maps.Animation.DROP
-                    }));
+                        markers.push(new google.maps.Marker({
+                            position: position,
+                            map: map,
+                            animation: google.maps.Animation.DROP
+                        }));
                     }, timeout);
                 };
 
                 function clearMarkers() {
                     for (var i = 0; i < markers.length; i++) {
-                    markers[i].setMap(null);
+                        markers[i].setMap(null);
                     }
                     markers = [];
                 };
@@ -83,30 +80,30 @@
                     async defer></script>
 
                 <style>
-                    #map {
-                        height: 500px;
-                        width: 100%;
-                        }
+                #map {
+                    height: 500px;
+                    width: 100%;
+                }
 
-                        .container {
-                            height: 80%;
-                        }
-                        #floating-panel {
-                            position: absolute;
-                            top: 150px;
-                            left: 20%;
-                            z-index: 5;
-                            background-color: #fff;
-                            padding: 5px;
-                            border: 1px solid #999;
-                            text-align: center;
-                            font-family: 'Roboto','sans-serif';
-                            line-height: 30px;
-                            padding-left: 10px;
-                          }
-                          #floating-panel {
-                            margin-left: -52px;
-                          }
+                .container {
+                    height: 80%;
+                }
+                #floating-panel {
+                    position: absolute;
+                    top: 150px;
+                    left: 20%;
+                    z-index: 5;
+                    background-color: #fff;
+                    padding: 5px;
+                    border: 1px solid #999;
+                    text-align: center;
+                    font-family: 'Roboto','sans-serif';
+                    line-height: 30px;
+                    padding-left: 10px;
+                }
+                #floating-panel {
+                    margin-left: -52px;
+                }
                 </style>
 
             </div>
