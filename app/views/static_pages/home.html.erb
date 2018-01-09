@@ -22,16 +22,16 @@
         </div>
     </div>
     <%= render 'google-map'%>
-    
+
     <%= render 'testimonials'%>
-    
+
     <div class="section-subscribe">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 ml-auto mr-auto">
                         <br><br>
                         <!-- <h2 class="title">Subscribe bitch</h2> -->
-                        <p class="description">Inscrivez-vous et recevez un report régulier sur les derniers bootcamps; les témoignages, bref l'actu du domaine
+                        <p class="description">Inscrivez-vous et recevez un report régulier sur les derniers bootcamps, les témoignages..bref l'actu du domaine !
                             <br>
                         </p>
                         <form role="form" id="contact-form" method="post">
@@ -43,14 +43,18 @@
                                 <input type="email" name="email" class="form-control" placeholder="exemple@exemp.le">
                             </div>
                             <div class="submit text-center">
-                                <input type="submit" class="btn btn-primary btn-raised btn-round" value="Nous contacter" />
+                                <input type="submit" class="btn btn-primary btn-raised btn-round" value="Je m'inscris" />
                             </div>
                         </form>
+                        <div class="">
+                          dsqdsdsds
+                            <%= @email %>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
     <% if false %>
         <%= render 'about-us'%>
         <%= render 'some-stats'%>

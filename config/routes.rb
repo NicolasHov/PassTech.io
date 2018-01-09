@@ -2,16 +2,19 @@ Rails.application.routes.draw do
 
   # SITE VITRINE
   root 'static_pages#home'
-  get '/peer-learning', to: 'static_pages#peerlearning', as: 'home_peer_learning'
   get '/faq', to: 'static_pages#faq', as: 'home_faq'
 
   get '/about', to: 'static_pages#about', as: 'home_about'
   get '/mentions-legales', to: 'static_pages#mentions_legales', as: 'home_mentions_legales'
   get '/contact', to: 'static_pages#contact', as: 'home_contact'
   post '/contact', to: 'static_pages#contact_send_message'
+  get '/subscribe', to: 'static_pages#subscribe', as: 'home_subscribe'
+  post '/subscribe', to: 'static_pages#subscribe_email'
 
    # DEVISE USERS
-   devise_for :users, controllers: { registrations: 'registrations' }, skip: [:registrations, :sessions]
+   devise_for :users, controllers: { registrations: 'registrations' }
+   #, skip: [:registrations, :sessions]
+   
   #  devise_scope :user do
   #    get 'signup', to: 'registrations#new', as: :new_user_registration
   #    post 'signup', to: 'registrations#create', as: :user_registration
