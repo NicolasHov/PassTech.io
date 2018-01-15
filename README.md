@@ -1,9 +1,14 @@
 # README
 
-This README document whatever steps are necessary to get the
-application up and running.
+# Blue-Cheese
+> Short blurb about what your product does.
 
-Things you may want to cover:
+One to two paragraph statement about your product and what it does.
+
+![](header.png)
+
+
+## Configuration
 
 * Ruby version 
 
@@ -17,13 +22,60 @@ Things you may want to cover:
 
 * Database initialization
 
-* How to run the test suite
-no test suite yet
 
-* Services (job queues, cache servers, search engines, etc.)
-no sevices yet
+## Installation
 
-* Deployment instructions
+OS X & Linux:
 
-* ...
-# blue-cheese-project
+```sh
+bundle install
+rails db:migrate
+rails db:seed
+rails assets:precompile
+```
+
+Windows:
+
+```sh
+
+```
+
+## Usage example
+
+<!-- A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots. -->
+
+<!-- _For more examples and usage, please refer to the [Wiki][wiki]._ -->
+
+## Development setup
+
+```sh
+bundle install
+rails db:migrate
+rails db:seed
+rails assets:precompile
+```
+
+## Release History
+* 0.1.0
+    * The first proper release ... (???)
+* 0.0.1
+    * Work in progress (now)
+
+## Meta
+
+Your Name – [@Twitter](https://twitter.com/Kola_Hov) – kola.hov@gmail.com
+
+Distributed under the XYZ license. See ``LICENSE`` for more information.
+
+[https://github.com/yourname/NicolasHov](https://github.com/NicolasHov/)
+
+## Contributing
+
+1. Fork it (<https://github.com/yourname/yourproject/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+<!-- [wiki]: https://github.com/yourname/yourproject/wiki -->
