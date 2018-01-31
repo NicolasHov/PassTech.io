@@ -1,60 +1,37 @@
 # Blue-Cheese
 
 <!--
-> Short blurb about what your product does.
-
-One to two paragraph statement about your product and what it does.
-
-![](header.png)
-
 ## Configuration
 
 * Ruby version
-
 * Rails version : 5.1.2
-
 * System dependencies
-
 * Configuration
-
 * Database creation
-
 * Database initialization
 -->
 
 ## Installation
 
-OS X & Linux:
-
 ```sh
+# Install dependencies
 bundle install
+# Generate database
 rails db:migrate
 rails db:seed
+# Generate assets
 rails assets:precompile
+# Launch the server on http://localhost:3000/
+bin/rails server
 ```
 
 <!--
-Windows:
-
-```sh
-TODO
-```
-
 ## Usage example
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+_For more examples and usage, please refer to the [Wiki](https://github.com/NicolasHov/blue-cheese-project/wiki)._
 -->
-
-## Development setup
-
-```sh
-bundle install
-rails db:migrate
-rails db:seed
-rails assets:precompile
-```
 
 ## Release History
 * 0.1.0
@@ -75,8 +52,3 @@ Distributed under the GPL v3 license. See `LICENSE` for more information.
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
-
-<!--
-Markdown link & img dfn's
-[wiki]: https://github.com/NicolasHov/blue-cheese-project/wiki
--->
