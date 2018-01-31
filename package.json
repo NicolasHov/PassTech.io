@@ -1,5 +1,7 @@
 {
   "name": "blue-cheese-project",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
 }
