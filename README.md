@@ -1,4 +1,6 @@
-# Blue-Cheese
+# Blue-Cheese-Project
+
+![Blue Cheese](https://raw.githubusercontent.com/NicolasHov/blue-cheese-project/master/public/assets/blue_cheese_1-6efb02c67ce4255a362de22bab88387d065e33b86bc7c2f5781d58e5d840c7bc.jpg)
 
 <!--
 ## Configuration
