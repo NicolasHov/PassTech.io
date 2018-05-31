@@ -1,9 +1,6 @@
 # Blue-Cheese-Project
 [![Build Status](https://travis-ci.org/NicolasHov/blue-cheese-project.svg?branch=master)](https://travis-ci.org/NicolasHov/blue-cheese-project)
 
-# README
-
-# Blue-Cheese
 > Short blurb about what your product does.
 
 One to two paragraph statement about your product and what it does.
