@@ -1,5 +1,5 @@
 # Blue-Cheese-Project
-[![Build Status](https://travis-ci.org/NicolasHov/blue-cheese-project.svg?branch=master)](https://travis-ci.org/NicolasHov/blue-cheese-project)
+[![Build Status](https://travis-ci.org/NicolasHov/passtech.svg?branch=master)](https://travis-ci.org/NicolasHov/passtech)
 
 > Short blurb about what your product does.
 
