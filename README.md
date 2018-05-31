@@ -30,7 +30,7 @@ rails db:migrate
 rails db:seed
 # Generate assets
 rails assets:precompile
-# Launch the server on http://localhost:3000/
+# Launch the server on port 80
 bin/rails server
 ```
 
