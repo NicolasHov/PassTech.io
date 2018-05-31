@@ -1,4 +1,14 @@
 # Blue-Cheese-Project
+[![Build Status](https://travis-ci.org/NicolasHov/blue-cheese-project.svg?branch=master)](https://travis-ci.org/NicolasHov/blue-cheese-project)
+
+# README
+
+# Blue-Cheese
+> Short blurb about what your product does.
+
+One to two paragraph statement about your product and what it does.
+
+![](header.png)
 
 ![Blue Cheese](https://raw.githubusercontent.com/NicolasHov/blue-cheese-project/master/public/assets/blue_cheese_1-6efb02c67ce4255a362de22bab88387d065e33b86bc7c2f5781d58e5d840c7bc.jpg)
 
