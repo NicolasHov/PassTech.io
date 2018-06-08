@@ -1,24 +1,21 @@
-# Blue-Cheese-Project
+# PassTech.io
 [![Build Status](https://travis-ci.org/NicolasHov/passtech.svg?branch=master)](https://travis-ci.org/NicolasHov/passtech)
 
-> Short blurb about what your product does.
+> Parceque ça suffit d'être pris pour des pastèques !! Trouve TA formation à la programmation informatique !
 
-One to two paragraph statement about your product and what it does.
 
-![](header.png)
+![](startdown-emoji.png)
 
-![Blue Cheese](https://raw.githubusercontent.com/NicolasHov/blue-cheese-project/master/public/assets/blue_cheese_1-6efb02c67ce4255a362de22bab88387d065e33b86bc7c2f5781d58e5d840c7bc.jpg)
 
-<!--
-## Configuration
+## Configuration (wip)
 
-* Ruby version
+* Ruby version : 
 * Rails version : 5.1.2
 * System dependencies
 * Configuration
 * Database creation
 * Database initialization
--->
+
 
 ## Installation
 
@@ -39,14 +36,16 @@ bin/rails server
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-_For more examples and usage, please refer to the [Wiki](https://github.com/NicolasHov/blue-cheese-project/wiki)._
+_For more examples and usage, please refer to the [Wiki](https://github.com/NicolasHov/PassTech.io/wiki)._
 -->
 
 ## Release History
 * 0.1.0
-    * The first proper release ... (wip)
+    * The first proper release ... 
 * 0.0.1
     * Work in progress (now)
+
+
 
 ## Meta
 
@@ -56,7 +55,7 @@ Distributed under the GPL v3 license. See `LICENSE` for more information.
 
 ## Contributing
 
-1. Fork it (<https://github.com/NicolasHov/blue-cheese-project>)
+1. Fork it (<https://github.com/NicolasHov/PassTech.io>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
