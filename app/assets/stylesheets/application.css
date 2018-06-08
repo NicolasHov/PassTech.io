@@ -13,11 +13,5 @@
  *= require custom
  *= require_self
 
- * Appelle la librairie Now-UI-Kit
- *= require bootstrap.min
- *= require now-ui-kit
- *= require demo
- *= require_tree .
-
  
  */
