@@ -4,7 +4,7 @@
 > Parceque ça suffit d'être pris pour des pastèques !! Trouve TA formation à la programmation informatique !
 
 
-![](app/assets/images/startdown-emoji.png)
+![](https://i.imgur.com/w4OknnK.jpg)
 
 
 ## Configuration (wip)
